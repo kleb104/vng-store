@@ -203,12 +203,12 @@
     "descripcion": "Un sistema, tres modos de reproducción: TV, mesa y portátil. Nintendo Switch 2 juega juegos de Nintendo Switch físicos y digitales compatibles.",
     "imagen": "imgs/nintendo-switch2.webp",
     "imagenes": ["imgs/nintendo-switch2.webp","imgs/nintendo-switch2-2.webp", "imgs/nintendo-switch2-3.webp"],
-    "categoria": "videojuegos",
+    "categoria": "consolas",
     "relevante": false,
     "cantidad": 10,
     "tiempoEntrega": "2-3 días",
     "envio": 2.00,
-    "reseñas": []
+    "reseñas": [{"usuario":"Ana","comentario":"Excelente consola, no me encantan los nuevos mandos.","calificacion":4}]
   }
   
 ]
