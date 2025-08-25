@@ -1,0 +1,190 @@
+/* =========================
+   Estilo general del sitio
+========================= */
+main {
+  padding-bottom: 80px;
+  /* espacio para que el footer no tape contenido */
+}
+
+/* =========================
+   Estilos de productos
+========================= */
+#productos-relevantes .card {
+  color: #fff !important;
+}
+
+#productos-relevantes .precio {
+  color: #fff !important;
+}
+
+/* =========================
+   Botones personalizados
+========================= */
+.btn-outline-light {
+  border-color: #7f5af0;
+  color: #7f5af0;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:focus {
+  color: #fff;
+  background-color: #7f5af0;
+  border-color: #7f5af0;
+  box-shadow: 0 0 0 0.25rem rgba(127, 90, 240, 0.5);
+}
+
+.btn-primary {
+  background-color: #16161a;
+  border-color: #7f5af0;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #16161a;
+  border-color: #6a49cc;
+  transform: scale(1.1);
+}
+
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #16161a;
+  border-color: #5a3fb3;
+  box-shadow: 0 0 0 0.25rem rgba(127, 90, 240, 0.5);
+}
+
+/* =========================
+   Footer
+========================= */
+footer {
+  background-color: #16161a;
+  color: #ccc;
+  font-size: 16px;
+  padding: 15px 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: #ccc;
+}
+
+footer a:hover {
+  color: #7f5af0;
+}
+
+.footer-divider {
+  width: 1px;
+  height: 80px;
+  background-color: #242629;
+  margin: 0 auto;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 15px;
+  color: #aaa;
+  font-size: 14px;
+  border-top: 1px solid #242629;
+  margin-top: 20px;
+}
+
+.social-icons img {
+  width: 43px;
+  height: 43px;
+  object-fit: contain;
+  margin: 0 8px;
+  transition: transform 0.2s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+/* =========================
+   Tarjetas
+========================= */
+.card,
+.card-title,
+.card-text {
+  color: white !important;
+}
+
+.card {
+  background-color: #1c1c1c;
+}
+
+.card img {
+  transition: transform 0.3s ease;
+}
+
+.card img:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   Buscador con resultados
+========================= */
+#input-buscar,
+#input-buscar:focus,
+#form-buscar button,
+#form-buscar button:focus {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+#form-buscar {
+  border-bottom: none !important;
+}
+
+#resultados-busqueda {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0; /* Ocupa todo el ancho del contenedor en móviles */
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+  width: 100%; /* Se adapta al ancho del form */
+}
+
+.resultado-item {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.resultado-item:hover {
+  background: #f8f9fa;
+}
+
+.resultado-item img {
+    width: 35px;
+    height: 35px;
+}
+
+.resultado-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.resultado-titulo {
+    font-size: 13px;
+}
+
+.resultado-precio {
+  font-size: 12px;
+  color: #ccc;
+}
+@media (max-width: 576px) {
+  #resultados-busqueda {
+    font-size: 14px;
+    max-height: 250px;
+  }
+}
+

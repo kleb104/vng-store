@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>V&G - Ubícanos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/scss/custom.css" />
+  <link rel="stylesheet" href="/css/indexStyleSheet.css" />
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand p-2" href="./index.html">
+          <img src="imgs/V&G-LOGO2-cut.webp" alt="V&G Logo" style="height: 40px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li clas="nav-item">
+            </li>
+          </ul>
+          <!-- Barra de búsqueda con autocomplete -->
+          <form class="d-flex position-relative" id="form-buscar">
+            <input class="form-control me-sm-2" type="search" placeholder="Buscar..." aria-label="Search"
+              id="input-buscar" autocomplete="off">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+              <img src="./imgs/lupa.webp" alt="Buscar" style="height: 40px;">
+            </button>
+            <div id="resultados-busqueda"></div>
+          </form>
+
+          <a href="./compra.html" class="btn btn-primary mx-2" id="cart">
+            <img src="./imgs/carrito.webp" alt="Carrito" style="height: 40px;">
+          </a>
+          </ul>
+        </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container-fluid p-3" data-bs-theme="dark">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-start h-100">
+
+        <!-- Formulario de Pago -->
+
+        <div class="card" style="border-radius: 15px;">
+          <div class="card-body p-5">
+            <h2 class="fw-bold mb-4">Formulario de Pago</h2>
+            <form>
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre completo</label>
+                <input type="text" class="form-control" id="nombre" required>
+              </div>
+              <div class="mb-3">
+                <label for="correo" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="correo" required>
+              </div>
+              <div class="mb-3">
+                <label for="tarjeta" class="form-label">Número de tarjeta</label>
+                <input type="text" class="form-control" id="tarjeta" maxlength="16" inputmode="numeric" required
+                  oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="exp" class="form-label">Expiración</label>
+                  <input type="text" class="form-control" id="exp" placeholder="MM/AA" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="cvv" class="form-label">CVV</label>
+                  <input type="text" class="form-control" id="cvv" maxlength="3" required>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary w-100 mt-3">Pagar ahora</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="container-fluid bg-dark" data-bs-theme="dark">
+    <div class="row text-center align-items-center justify-content-between">
+      <div class="col-md-3 mb-3 mb-md-0 p-3 text-center">
+        <div class="row row-cols-2">
+          <div><a class="h3" href="./acercade.html">Acerca de</a></div>
+          <div><a class="h3" href="./ubicanos.html">Ubícanos</a></div>
+        </div>
+      </div>
+      <div class="d-none d-md-block col-md-1">
+        <div class="footer-divider mx-auto"></div>
+      </div>
+      <div class="col-md-4 mb-3 mb-md-0 text-center fw-semibold h5">
+        <img src="./imgs/campana.webp" alt="Suscríbete" style="height: 35px;">
+        ¡Suscríbete para enterarte de estrenos y ofertas!
+      </div>
+      <div class="d-none d-md-block col-md-1">
+        <div class="footer-divider mx-auto"></div>
+      </div>
+      <div class="col-md-3 d-flex justify-content-center align-items-center gap-4 mx-auto social-icons">
+        <a href="https://www.discord.com" target="_blank"><img src="./imgs/discord-logo.webp" alt=""></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="./imgs/instagram-logo.webp" alt=""></a>
+        <a href="https://www.x.com" target="_blank"><img src="./imgs/x-logo.webp" alt=""></a>
+        <a href="https://www.facebook.com" target="_blank"><img src="./imgs/facebook-logo.webp" alt=""></a>
+      </div>
+    </div>
+    <div class="footer-bottom mt-4">
+      Copyright © 2025 Team V&G - All rights reserved
+    </div>
+  </footer>
+  <script src="./javascript/buscador.js"></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

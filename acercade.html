@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>V&G - Nosotros</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/scss/custom.css" />
+  <link rel="stylesheet" href="/css/indexStyleSheet.css" />
+  <style>
+    .card-img-top.no-hover-zoom:hover {
+      transform: none !important;
+      transition: none !important;
+    }
+
+    .card-img-top {
+      height: 450px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand p-2" href="./index.html">
+          <img src="imgs/V&G-LOGO2-cut.webp" alt="V&G Logo" style="height: 40px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li clas="nav-item">
+              <a class="nav-link" href="./productos.html">Todos los productos</a>
+            </li>
+            <!-- Dropdown de Categorías -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Categorías
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="categoriasDropdown">
+                <li><a class="dropdown-item" href="productos.html?categoria=videojuegos">Videojuegos</a></li>
+                <li><a class="dropdown-item" href="productos.html?categoria=consolas">Consolas</a></li>
+                <li><a class="dropdown-item" href="productos.html?categoria=tcg">TCG</a></li>
+                <li><a class="dropdown-item" href="productos.html?categoria=accesorios">Accesorios</a></li>
+              </ul>
+            </li>
+          </ul>
+          <!-- Barra de búsqueda con autocomplete -->
+          <form class="d-flex position-relative" id="form-buscar">
+            <input class="form-control me-sm-2" type="search" placeholder="Buscar..." aria-label="Search"
+              id="input-buscar" autocomplete="off">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+              <img src="./imgs/lupa.webp" alt="Buscar" style="height: 40px;">
+            </button>
+            <div id="resultados-busqueda"></div>
+          </form>
+
+          <a href="./compra.html" class="btn btn-primary mx-2" id="cart">
+            <img src="./imgs/carrito.webp" alt="Carrito" style="height: 40px;">
+          </a>
+          </ul>
+        </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container" data-bs-theme="dark">
+
+    <h3 class="text-center my-4 text-light">Autores</h3>
+
+    <div class="row justify-content-center">
+      
+      <div class="col-md-4 mb-4 p-4 bg-">
+        <div class="card h-100 shadow-sm">
+          <img src="./imgs/Nosotros-1.webp" class="card-img-top no-hover-zoom" alt="Foto-Miguel">
+          <div class="card-body text-center">
+            <h5 class="card-title">Jose Miguel Valverde Lopez</h5>
+            <p class="card-text my-2"><strong>Cédula:</strong> 604020396</p>
+            <p class="card-text my-2"><strong>Correo:</strong> <a
+                href="mailto:jmiguelvalverdel@gmail.com">jmiguelvalverdel@gmail.com</a></p>
+            <p class="card-text my-2"><strong>Información adicional:</strong> Estudiante apasionado por la programación,
+              el diseño web y los
+              videojuegos. Desarrollador de frontend y parte del equipo creativo de Team V&G.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4 p-4">
+        <div class="card h-100 shadow-sm">
+          <img src="./imgs/Nosotros-2.webp" class="card-img-top no-hover-zoom" alt="Foto-Miguel">
+          <div class="card-body text-center">
+            <h5 class="card-title">Caleb Picado González</h5>
+            <p class="card-text my-2"><strong>Cédula:</strong> 208640182</p>
+            <p class="card-text my-2">Correo:</strong> <a
+                href="mailto:caleb.picadogonzalez@gmail.com">caleb.picadogonzalez@gmail.com</a></p>
+            <p class="card-text my-2"><strong>Información adicional:</strong> Estudiante con experiencia en soporte
+              técnico,programación, el diseño
+              web, amante del gaming y entusiasta del hardware. Participa en la estrategia y atención al cliente en Team
+              V&G.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="row">
+    <div class="col text-center">
+      <button class="btn btn-primary mt-4" onclick="history.back()">Volver</button>
+    </div>
+  </div>
+  </main>
+
+  <footer class="container-fluid bg-dark" data-bs-theme="dark">
+    <div class="row text-center align-items-center justify-content-between">
+      <div class="col-md-3 mb-3 mb-md-0 p-3 text-center">
+        <div class="row row-cols-2">
+          <div><a class="h3" href="./acercade.html">Acerca de</a></div>
+          <div><a class="h3" href="./ubicanos.html">Ubícanos</a></div>
+        </div>
+      </div>
+      <div class="d-none d-md-block col-md-1">
+        <div class="footer-divider mx-auto"></div>
+      </div>
+      <div class="col-md-4 mb-3 mb-md-0 text-center fw-semibold h5">
+        <img src="./imgs/campana.webp" alt="Suscríbete" style="height: 35px;">
+        ¡Suscríbete para enterarte de estrenos y ofertas!
+      </div>
+      <div class="d-none d-md-block col-md-1">
+        <div class="footer-divider mx-auto"></div>
+      </div>
+      <div class="col-md-3 d-flex justify-content-center align-items-center gap-4 mx-auto social-icons">
+        <a href="https://www.discord.com" target="_blank"><img src="./imgs/discord-logo.webp" alt=""></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="./imgs/instagram-logo.webp" alt=""></a>
+        <a href="https://www.x.com" target="_blank"><img src="./imgs/x-logo.webp" alt=""></a>
+        <a href="https://www.facebook.com" target="_blank"><img src="./imgs/facebook-logo.webp" alt=""></a>
+      </div>
+    </div>
+    <div class="footer-bottom mt-4">
+      Copyright © 2025 Team V&G - All rights reserved
+    </div>
+  </footer>
+  <script src="./javascript/buscador.js"></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

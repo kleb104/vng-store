@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>V&G - Inicio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/scss/custom.css" />
+  <link rel="stylesheet" href="/css/indexStyleSheet.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand p-2" href="./index.html">
+          <img src="imgs/V&G-LOGO2-cut.webp" alt="V&G Logo" style="height: 40px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="./productos.html">Todos los productos</a>
+            </li>
+
+            <!-- Dropdown de Categorías -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Categorías
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="categoriasDropdown">
+                <li><a class="dropdown-item" href="productos.html?categoria=videojuegos">Videojuegos</a></li>
+                <li><a class="dropdown-item" href="productos.html?categoria=consolas">Consolas</a></li>
+                <li><a class="dropdown-item" href="productos.html?categoria=tcg">TCG</a></li>
+                <li><a class="dropdown-item" href="productos.html?categoria=accesorios">Accesorios</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <!-- Barra de búsqueda con autocomplete -->
+          <form class="d-flex position-relative" id="form-buscar">
+            <input class="form-control me-sm-2" type="search" placeholder="Buscar..." aria-label="Search"
+              id="input-buscar" autocomplete="off">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+              <img src="./imgs/lupa.webp" alt="Buscar" style="height: 40px;">
+            </button>
+            <div id="resultados-busqueda"></div>
+          </form>
+
+          <a href="./compra.html" class="btn btn-primary mx-2" id="cart">
+            <img src="./imgs/carrito.webp" alt="Carrito" style="height: 40px;">
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container my-4">
+    <!-- Carrusel -->
+    <div id="carouselVG" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselVG" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselVG" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselVG" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+      <div class="carousel-inner rounded-3 shadow-sm">
+        <div class="carousel-item active">
+          <img src="imgs/gta-vi.webp" class="d-block w-100" alt="Promoción 1"
+            style="max-height: 400px; object-fit: cover;">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+            <h5>Ofertas Exclusivas en Videojuegos</h5>
+            <p>Descubre los mejores títulos y accesorios con descuento.</p>
+            <a href="productos.html?categoria=videojuegos" class="btn btn-primary">Ver Productos</a>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="imgs/DBZ.webp" class="d-block w-100" alt="Promoción 2" style="max-height: 400px; object-fit: cover;">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+            <h5>Lo Mejor en Cartas Coleccionables</h5>
+            <p>Amplía tu colección con los sets más recientes.</p>
+            <a href="productos.html?categoria=tcg" class="btn btn-primary">Explorar TCG</a>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="imgs/ps5.webp" class="d-block w-100" alt="Promoción 3" style="max-height: 400px; object-fit: cover;">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+            <h5>Accesorios Gaming de Alta Calidad</h5>
+            <p>Mejora tu experiencia con periféricos seleccionados.</p>
+            <a href="productos.html?categoria=accesorios" class="btn btn-primary">Comprar Accesorios</a>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselVG" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselVG" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+
+    <section class="my-5">
+      <h2 class="mb-4 text-center text-white">Productos Más Relevantes</h2>
+      <div class="row" id="productos-relevantes"></div>
+    </section>
+  </main>
+
+  <footer class="container-fluid bg-dark" data-bs-theme="dark">
+    <div class="row text-center align-items-center justify-content-between">
+      <div class="col-md-3 mb-3 mb-md-0 p-3 text-center">
+        <div class="row row-cols-2">
+          <div><a class="h3" href="./acercade.html">Acerca de</a></div>
+          <div><a class="h3" href="./ubicanos.html">Ubícanos</a></div>
+        </div>
+      </div>
+      <div class="d-none d-md-block col-md-1">
+        <div class="footer-divider mx-auto"></div>
+      </div>
+      <div class="col-md-4 mb-3 mb-md-0 text-center fw-semibold h5">
+        <img src="./imgs/campana.webp" alt="Suscríbete" style="height: 35px;">
+        ¡Suscríbete para enterarte de estrenos y ofertas!
+      </div>
+      <div class="d-none d-md-block col-md-1">
+        <div class="footer-divider mx-auto"></div>
+      </div>
+      <div class="col-md-3 d-flex justify-content-center align-items-center gap-4 mx-auto social-icons">
+        <a href="https://www.discord.com" target="_blank"><img src="./imgs/discord-logo.webp" alt=""></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="./imgs/instagram-logo.webp" alt=""></a>
+        <a href="https://www.x.com" target="_blank"><img src="./imgs/x-logo.webp" alt=""></a>
+        <a href="https://www.facebook.com" target="_blank"><img src="./imgs/facebook-logo.webp" alt=""></a>
+      </div>
+    </div>
+    <div class="footer-bottom mt-4">
+      Copyright © 2025 Team V&G - All rights reserved
+    </div>
+  </footer>
+
+  <!-- Scripts: Bootstrap primero, luego tus scripts -->
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./javascript/index.js"></script>
+  <script src="./javascript/buscador.js"></script>
+</body>
+</html>
