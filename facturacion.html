@@ -38,9 +38,38 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li clas="nav-item">
+            <li class="nav-item">
+              <a class="nav-link" href="./productos.html">Todos los productos</a>
+            </li>
+
+            <!-- Dropdown de Categorías -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Categorías
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="categoriasDropdown">
+                <li><a class="dropdown-item" href="productos.html?categoria=videojuegos">Videojuegos</a></li>
+                <li><a class="dropdown-item" href="productos.html?categoria=consolas">Consolas</a></li>
+                <li><a class="dropdown-item" href="productos.html?categoria=tcg">TCG</a></li>
+                <li><a class="dropdown-item" href="productos.html?categoria=accesorios">Accesorios</a></li>
+              </ul>
             </li>
           </ul>
+
+          <!-- Barra de búsqueda con autocomplete -->
+          <form class="d-flex position-relative" id="form-buscar">
+            <input class="form-control me-sm-2" type="search" placeholder="Buscar..." aria-label="Search"
+              id="input-buscar" autocomplete="off">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+              <img src="./imgs/lupa.webp" alt="Buscar" style="height: 40px;">
+            </button>
+            <div id="resultados-busqueda"></div>
+          </form>
+
+          <a href="./compra.html" class="btn btn-primary mx-2" id="cart">
+            <img src="./imgs/carrito.webp" alt="Carrito" style="height: 40px;">
+          </a>
         </div>
       </div>
     </nav>
